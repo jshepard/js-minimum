@@ -1,0 +1,21 @@
+# Local Configuration
+config/local.js
+
+# Dependencies
+node_modules
+
+# Momentum
+.tmp
+
+# Node.js / NPM
+lib-cov
+*.seed
+*.log
+*.out
+*.pid
+npm-debug.log
+
+# Miscellaneous
+.DS_STORE
+.netbeans
+.idea

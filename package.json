@@ -1,0 +1,29 @@
+{
+  "dependencies": {
+    "any-db": "^2.2.1",
+    "any-db-postgres": "^2.1.5",
+    "aws-serverless-express": "^3.3.5",
+    "bluebird": "^3.5.3",
+    "colors": "^1.3.3",
+    "express": "^4.16.4",
+    "gesundheit": "^0.10.0",
+    "knex": "^0.16.3",
+    "lodash": "^4.17.11",
+    "numeral": "^2.0.6",
+    "openapi-backend": "^2.0.1",
+    "pg": "^7.8.0",
+    "pluralize": "^7.0.0"
+  },
+  "name": "js-minimum",
+  "version": "1.0.0",
+  "description": "js-momentum core",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "jshepard",
+  "license": "ISC"
+}
