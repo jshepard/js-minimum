@@ -1,6 +1,6 @@
 ## js-minimum - Momentum Core
 
 ```
-yarn add https://github.com/jshepard/js-minimum
+yarn add ssh://git@github.com:jshepard/js-minimum.git
 node node_modules/js-minimum/initialize.js
 ```
