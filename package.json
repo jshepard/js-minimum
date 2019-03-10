@@ -7,12 +7,12 @@
     "colors": "^1.3.3",
     "express": "^4.16.4",
     "gesundheit": "^0.10.0",
+    "inflection": "^1.12.0",
     "knex": "^0.16.3",
     "lodash": "^4.17.11",
     "numeral": "^2.0.6",
     "openapi-backend": "^2.0.1",
-    "pg": "^7.8.0",
-    "pluralize": "^7.0.0"
+    "pg": "^7.8.0"
   },
   "name": "js-minimum",
   "version": "1.0.0",
