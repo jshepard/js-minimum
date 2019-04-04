@@ -1,5 +1,5 @@
 const { get, post, policies } = momentum.decorators
-const log = console.log.bind(console)
+
 class JarvisRoute extends momentum.Route {
 
   async status(req, res) {
