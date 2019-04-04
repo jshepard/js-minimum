@@ -124,6 +124,20 @@ describe('Controllers', function () {
     expectRoute('get', '/api/Account/sayHi')
   })
 
+  describe('Decorators', function () {
+    it('should load the default decorators', function () {
+      _.each(['options', 'policies', 'get', 'put', 'post', 'del', 'patch'], function (name) {
+        expect(momentum.decorators[name]).to.exist
+        expect(momentum.decorators[name]).to.be.a('function')
+      })
+    })
+
+    it('should load any custom decorators', function () {
+      expect(momentum.decorators.gamaLevel).to.exist
+      expect(momentum.decorators.gamaLevel).to.be.a('function')
+    })
+  })
+
   describe('model CRUD routes', function () {
     it('should have a create route', function () {
       expectRoute('post', '/api/Account')

@@ -1,4 +1,4 @@
-const { get, post, policies } = momentum.decorators
+const { get, post, gamaLevel } = momentum.decorators
 
 class JarvisRoute extends momentum.Route {
 
@@ -12,6 +12,7 @@ class JarvisRoute extends momentum.Route {
 
 }
 
+gamaLevel(100)(JarvisRoute)
 get('/')(JarvisRoute.prototype, 'status')
 post('/')(JarvisRoute.prototype, 'cleanSlateProtocol')
 

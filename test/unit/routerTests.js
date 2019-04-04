@@ -130,6 +130,11 @@ describe('Routers', function () {
       expectRoute('post', '/api/stark/jarvis')
     })
 
+    it('should apply decorators', function () {
+      let JarvisRoute = momentum.routes['api::stark::jarvisRoute'].constructor
+      expect(JarvisRoute.gamaLevel).to.equal(100)
+    })
+
   })
 
   describe('functionality', function () {
