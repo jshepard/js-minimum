@@ -6,7 +6,7 @@ const _ = require('lodash')
 const path = require('path')
 const chai = require('chai')
 
-const Momentum = require('../../lib/momentum')
+const Momentum = require('../../momentum')
 
 let expect = chai.expect
 

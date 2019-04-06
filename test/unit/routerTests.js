@@ -7,7 +7,7 @@ const path = require('path')
 const chai = require('chai')
 const http = require('http')
 
-const Momentum = require('../../lib/momentum')
+const Momentum = require('../../momentum')
 
 let expect = chai.expect
 let momentum

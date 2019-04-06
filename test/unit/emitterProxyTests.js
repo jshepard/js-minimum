@@ -23,7 +23,7 @@ describe('Emitter Proxy', function () {
   before(function () {
     stack.push(process.cwd())
     process.chdir(fixturesPath)
-    let Momentum = require('../../lib/momentum')
+    let Momentum = require('../../momentum')
     momentum = new Momentum({
       environment: 'test',
       processType: 'config',
