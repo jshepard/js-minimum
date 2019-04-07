@@ -2,21 +2,11 @@
 const _ = require('lodash')
 const path = require('path')
 const chai = require('chai')
-const { EventEmitter } = require('events')
+
+const Momentum = require('../../momentum')
 
 // let assert = chai.assert
 let expect = chai.expect
-
-class Momentum extends EventEmitter {
-    constructor (config) {
-      super()
-
-      this.log = () => {}
-      this.config = config || {}
-      this.modules = {}
-      this.utils = require('../../lib/momentum/utils')
-    }
-}
 
 describe('Config', function () {
   let fixturesPath = path.join(__dirname, '../fixtures/simple')
@@ -31,14 +21,13 @@ describe('Config', function () {
     process.chdir(stack.pop())
   })
 
-  it('should load', function () {
-    let loadConfiguration = require('../../lib/momentum/configuration')
+  it('should load', async function () {
     let momentum = new Momentum({
       environment: 'test',
       processType: 'config',
       log: {log: _.noop }
     })
-    loadConfiguration(momentum)
+    await momentum.onceReady()
 
     expect(momentum.config).to.be.a('object')
     expect(momentum.config.environment).to.equal('test')
