@@ -1,4 +1,4 @@
-const {get} = momentum.decorators
+const {get, wsConnect} = momentum.decorators
 
 class IndexRoute extends momentum.Route {
 
@@ -6,8 +6,15 @@ class IndexRoute extends momentum.Route {
     return 'Home'
   }
 
+  indexConnect(socket) {
+    socket.on('message', (data) => {
+
+    })
+  }
 }
 
 get()(IndexRoute.prototype, 'index')
+wsConnect()(IndexRoute.prototype, 'indexConnect')
+
 
 module.exports = IndexRoute

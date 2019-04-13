@@ -12,7 +12,8 @@
     "lodash": "^4.17.11",
     "numeral": "^2.0.6",
     "openapi-backend": "^2.0.1",
-    "pg": "^7.8.0"
+    "pg": "^7.8.0",
+    "socket.io": "^2.2.0"
   },
   "name": "js-minimum",
   "version": "1.0.0",
