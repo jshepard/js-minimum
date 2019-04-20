@@ -460,6 +460,17 @@ describe('Models', function () {
         let record = await Account.create(values)
         expect(record instanceof Account).to.be.true
         expect(record.id).to.be.above(0)
+        expect(record._detached).to.be.false
+      })
+
+      it('can create a record with new', async function () {
+        let values = _.clone(shieldAgent)
+        let record = new Account()
+        record.set(values)
+        await record.save()
+        expect(record instanceof Account).to.be.true
+        expect(record.id).to.be.above(0)
+        expect(record._detached).to.be.false
       })
 
     })
