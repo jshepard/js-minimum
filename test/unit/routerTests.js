@@ -146,9 +146,25 @@ describe('Routers', function () {
       await momentum.onceStarted()
     })
 
+    it('should get /api/Account/sayHi to accountController#sayHi', async function () {
+      let results = await execRoute('get', '/api/Account/sayHi')
+      expect(results).to.equal('hi!')
+    })
+
     it('should get / to indexRoute#index', async function () {
       let results = await execRoute('get', '/')
       expect(results).to.equal('Home')
+    })
+
+
+    it('should get /api/stark to starkRoute#index', async function () {
+      let results = await execRoute('get', '/api/stark')
+      expect(results).to.equal('Ready')
+    })
+
+    it('should get /api/stark/ceo to starkRoute#ceo', async function () {
+      let results = await execRoute('get', '/api/stark/ceo')
+      expect(results).to.equal('Pepper Potts')
     })
 
     it('should get /api/stark/jarvis to jarvisRoute#status', async function () {
