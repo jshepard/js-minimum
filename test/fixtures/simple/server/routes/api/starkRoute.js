@@ -10,9 +10,14 @@ class StarkRoute extends momentum.Route {
     return 'Pepper Potts'
   }
 
+  async jarvis(req, res) {
+    return 'NOT FOUND'
+  }
+
 }
 
 get('/')(StarkRoute.prototype, 'index')
 get('/ceo')(StarkRoute.prototype, 'ceo')
+get('/jarvis')(StarkRoute.prototype, 'jarvis')
 
 module.exports = StarkRoute
